@@ -1,1 +1,7 @@
-etc	etc
+etc/init/vdr.conf	etc/init
+etc/init/vdr-exit-2.conf	etc/init
+etc/init/vdr-exit-other.conf	etc/init
+usr/lib/vdr/commands-loader.sh	usr/lib/vdr
+usr/lib/vdr/config-loader.sh	usr/lib/vdr
+usr/lib/vdr/plugin-loader.sh	usr/lib/vdr
+
