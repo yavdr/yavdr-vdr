@@ -1,0 +1,22 @@
+Source: yavdr-vdr
+Section: multimedia
+Priority: extra
+Maintainer: Marco Scholl <develop@marco-scholl.de>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.2
+Homepage: http://www.yavdr.org
+
+Package: yavdr-vdr
+Architecture: all
+Depends: ${misc:Depends} vdr, vdr-addon-acpiwakeup, vdr-addon-lifeguard, vdr-plugin-channellists, vdr-plugin-dbus2vdr, vdr-plugin-dummydevice, vdr-plugin-dynamite, vdr-plugin-epgsearch, vdr-plugin-femon, w-scan, vdr-plugin-menuorg
+Description: vdr base meta package for yaVDR
+
+Package: yavdr-vdr-plugins
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-extrecmenu, vdr-plugin-iptv, vdr-plugin-live, vdr-plugin-markad, vdr-addon-avahi-mounter, vdr-plugin-streamdev-server, vdr-plugin-wirbelscan
+Description: vdr base meta package for yaVDR
+
+Package: yavdr-vdr-themes
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-skinpearlhd, vdr-plugin-text2skin, vdr-skin-narrowhd, vdr-skins-anthra, vdr-skins-speciallogos, vdr-tft-anthraize, vdr-tft-pearlhd, vdr-tft-standard, vdr-xpmlogos
+Description: vdr plugin meta package for yaVDR
