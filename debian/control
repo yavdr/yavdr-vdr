@@ -1,5 +1,5 @@
 Source: yavdr-vdr
-Section: multimedia
+Section: video
 Priority: extra
 Maintainer: Marco Scholl <develop@marco-scholl.de>
 Build-Depends: debhelper (>= 8.0.0)
