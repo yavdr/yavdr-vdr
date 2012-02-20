@@ -2,8 +2,13 @@
 
 case "$1" in
   configure)
+    # yavdr directory
     install -o vdr -g vdr  -d /srv/vdr/video.00/
 
+    # disable classic startup script
+    /usr/sbin/update-rc.d -f vdr remove
+
+    # some configurations
     chown vdr:vdr /var/log/vdr
     chsh -s /bin/bash vdr
     adduser vdr audio
