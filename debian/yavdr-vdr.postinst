@@ -2,6 +2,8 @@
 
 case "$1" in
   configure)
+    install -o vdr -g vdr  -d /srv/vdr/video.00/
+
     chown vdr:vdr /var/log/vdr
     chsh -s /bin/bash vdr
     adduser vdr audio
