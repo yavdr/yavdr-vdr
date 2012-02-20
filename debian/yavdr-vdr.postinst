@@ -1,29 +1,38 @@
 #!/bin/sh
 
 case "$1" in
-    configure)
-	chown vdr:vdr /var/log/vdr
-	chsh -s /bin/bash vdr
-	adduser vdr audio
-	adduser vdr cdrom
-        adduser vdr plugdev
-        ;;
+  configure)
+    chown vdr:vdr /var/log/vdr
+    chsh -s /bin/bash vdr
+    adduser vdr audio
+    adduser vdr cdrom
+    adduser vdr plugdev
 
-    triggered)
-	;;
+    VDR_UID=`id -u vdr`
+    VDR_GID=`id -g vdr`
+
+    # prefill hdf
+    . /usr/share/yavdr/helpers/hdf_prefill.sh
+
+    hdf_prefill "system.vdr.uid" "$VDR_UID"
+    hdf_prefill "system.vdr.gid" "$VDR_GID"
+    hdf_prefill "vdr.backend" "streaming"
+
+    # temlate files
+    /usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/remote.conf
+    /usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/commands.conf
+    /usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/keymacros.conf
+    /usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/plugins/menuorg.xml
+    /usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/plugins/iptv
+    /usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/Lircmap.xml
+    /usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/guisettings.xml
+    /usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/keymaps/gyration.xml
+    /usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/keymaps/remote.xml
+    /usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/sources.xml
+    /usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.gtkrc-2.0
+
+  ;;
 
 esac
-
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/remote.conf
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/commands.conf
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/keymacros.conf
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/plugins/menuorg.xml
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/plugins/iptv
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/Lircmap.xml
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/guisettings.xml
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/keymaps/gyration.xml
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/keymaps/remote.xml
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/sources.xml
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.gtkrc-2.0
 
 exit 0
