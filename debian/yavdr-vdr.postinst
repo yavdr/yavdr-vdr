@@ -31,6 +31,11 @@ case "$1" in
     /usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/keymaps/remote.xml
     /usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/sources.xml
     /usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.gtkrc-2.0
+    /usr/bin/process-template --owner root --group root --mode 0644 /usr/share/vdr/command-hooks/reccmds.removemarks.conf
+    /usr/bin/process-template --owner root --group root --mode 0644 /usr/share/vdr/command-hooks/reccmds.searchrepeats.conf
+    /usr/bin/process-template --owner root --group root --mode 0755 /usr/share/vdr/menuorg-appswitcher
+    /usr/bin/process-template --owner root --group root --mode 0755 /usr/share/vdr/shutdown-hooks/S99.shutdown
+    /usr/bin/process-template --owner root --group root --mode 0755 /usr/lib/vdr/vdr-recordingaction
 
   ;;
 
