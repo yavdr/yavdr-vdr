@@ -1,3 +1,4 @@
+var/log/vdr
 usr/lib/vdr
 etc
 usr/share/yavdr/templates
