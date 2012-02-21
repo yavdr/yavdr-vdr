@@ -19,7 +19,7 @@ case "$1" in
     VDR_GID=`id -g vdr`
 
     # prefill hdf
-    . /usr/share/yavdr/helpers/hdf_prefill.sh
+    . /usr/share/yavdr/helpers/hdf_prefill
     hdf_prefill "vdr.backend" "streaming"
 
     # overwrite uid and gid
