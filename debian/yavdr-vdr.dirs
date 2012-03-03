@@ -1,3 +1,4 @@
+etc/yavdr/backup
 var/log/vdr
 usr/lib/vdr
 etc

@@ -1,0 +1,15 @@
+/var/lib/vdr/channels.conf
+/var/lib/vdr/remote.conf
+/var/lib/vdr/setup.conf
+/var/lib/vdr/timers.conf
+/var/cache/vdr/commands.conf
+/var/cache/vdr/reccmds.conf
+/etc/vdr/svdrphosts.conf
+/etc/vdr/sources.conf
+/etc/vdr/scr.conf
+/etc/vdr/keymacros.conf
+/etc/vdr/diseqc.conf
+/etc/vdr/lifeguard.conf
+/etc/vdr/vdr-addon-acpiwakeup.conf
+/etc/vdr/plugins/streamdevhosts.conf
+
