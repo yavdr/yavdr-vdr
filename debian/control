@@ -13,7 +13,7 @@ Description: vdr base meta package for yaVDR
 
 Package: yavdr-vdr-plugins
 Architecture: all
-Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-extrecmenu, vdr-plugin-iptv, vdr-plugin-live, vdr-plugin-markad, vdr-addon-avahi-mounter, vdr-plugin-streamdev-server, vdr-plugin-wirbelscan
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-extrecmenu, vdr-plugin-iptv, vdr-plugin-live, vdr-plugin-markad, vdr-addon-avahi-mounter, vdr-plugin-streamdev-server, vdr-plugin-wirbelscan, vdr-plugin-restfulapi
 Description: vdr base meta package for yaVDR
 
 Package: yavdr-vdr-themes
