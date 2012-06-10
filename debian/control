@@ -8,7 +8,7 @@ Homepage: http://www.yavdr.org
 
 Package: yavdr-vdr
 Architecture: all
-Depends: ${misc:Depends} vdr, vdr-addon-acpiwakeup, vdr-addon-lifeguard, vdr-plugin-channellists, vdr-plugin-dbus2vdr, vdr-plugin-dummydevice, vdr-plugin-dynamite, vdr-plugin-epgsearch, vdr-plugin-femon, w-scan, vdr-plugin-menuorg
+Depends: ${misc:Depends} yavdr-base, vdr, vdr-addon-acpiwakeup, vdr-addon-lifeguard, vdr-plugin-channellists, vdr-plugin-dbus2vdr, vdr-plugin-dummydevice, vdr-plugin-dynamite, vdr-plugin-epgsearch, vdr-plugin-femon, w-scan, vdr-plugin-menuorg
 Description: vdr base meta package for yaVDR
 
 Package: yavdr-vdr-plugins

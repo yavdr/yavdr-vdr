@@ -1,5 +1,6 @@
 etc/yavdr/backup
 var/log/vdr
 usr/lib/vdr
+usr/bin
 etc
 usr/share/yavdr/templates
