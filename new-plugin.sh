@@ -5,7 +5,6 @@ mkdir -p plugins/$1/templates/etc/yavdr/vdr/plugins.conf
 
 echo "etc/yavdr/vdr/plugins" > debian/yavdr-vdr-plugin-$1.dirs
 echo "usr/share/yavdr/templates" >> debian/yavdr-vdr-plugin-$1.dirs
-echo "etc/yavdr/vdr/plugins/$1" >> debian/yavdr-vdr-plugin-$1.dirs
 
 echo "#!/bin/sh -e" > debian/yavdr-vdr-plugin-$1.postinst
 echo "" >> debian/yavdr-vdr-plugin-$1.postinst
