@@ -1,0 +1,1 @@
+User0		@osdteletext

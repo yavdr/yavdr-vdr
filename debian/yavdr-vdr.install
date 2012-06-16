@@ -1,5 +1,5 @@
 etc/*		etc/
 backup/*	etc/yavdr/backup/
-usr/lib/vdr/*	usr/lib/vdr/
+usr/		usr/
 templates/*	usr/share/yavdr/templates/
 scripts/*	usr/bin/

@@ -1,9 +1,8 @@
 etc/yavdr/backup
-var/log/vdr
 etc
 etc/yavdr/vdr
+usr
 usr/bin
-usr/lib/vdr
 usr/share/yavdr/templates
 usr/lib/yavdr/vdr/vtx
 usr/lib/yavdr/vdr/epgimages
