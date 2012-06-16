@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "dummydevice" ]; then
+  rm /etc/yavdr/vdr/plugins/dummydevice.conf
+fi
+
+exit 0

@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "channellists" ]; then
+  rm /etc/yavdr/vdr/plugins/channellists.conf
+fi
+
+exit 0

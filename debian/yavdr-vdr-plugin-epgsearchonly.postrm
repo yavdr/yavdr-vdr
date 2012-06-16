@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "epgsearchonly" ]; then
+  rm /etc/yavdr/vdr/plugins/epgsearchonly.conf
+fi
+
+exit 0

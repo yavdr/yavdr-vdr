@@ -1,6 +1,8 @@
 #!/bin/bash
 
-mkdir -p plugins/$1/templates/etc/yavdr/vdr/plugins/$1.conf
+mkdir -p plugins/$1/templates/etc/yavdr/vdr/plugins/plugin.$1.conf
+mkdir -p plugins/$1/templates/etc/yavdr/vdr/plugins.conf
+
 echo "etc/yavdr/vdr/plugins" > debian/yavdr-vdr-plugin-$1.dirs
 echo "usr/share/yavdr/templates" >> debian/yavdr-vdr-plugin-$1.dirs
 echo "etc/yavdr/vdr/plugins/$1" >> debian/yavdr-vdr-plugin-$1.dirs
@@ -24,7 +26,9 @@ echo "" >> debian/yavdr-vdr-plugin-$1.postrm
 echo "exit 0" >> debian/yavdr-vdr-plugin-$1.postrm
 
 echo "plugins/$1/templates/*	usr/share/yavdr/templates/" > debian/yavdr-vdr-plugin-$1.install
-echo '<?cs include:"/usr/share/yavdr/templates/includes/header.cs" ?>' > plugins/$1/templates/etc/yavdr/vdr/plugins/$1.conf/02_header.cs
+echo '<?cs include:"/usr/share/yavdr/templates/includes/header.cs" ?>' > plugins/$1/templates/etc/yavdr/vdr/plugins/plugin.$1.conf/02_header.cs
+
+echo $1 > plugins/$1/templates/etc/yavdr/vdr/plugins.conf/50_$1.cs
 
 chmod a+x debian/yavdr-vdr-plugin-$1.postinst
 chmod a+x debian/yavdr-vdr-plugin-$1.postrm

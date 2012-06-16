@@ -1,3 +1,4 @@
+etc/*		etc/
 backup/*	etc/yavdr/backup/
 usr/lib/vdr/*	usr/lib/vdr/
 templates/*	usr/share/yavdr/templates/

@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "conflictcheckonly" ]; then
+  rm /etc/yavdr/vdr/plugins/conflictcheckonly.conf
+fi
+
+exit 0

@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "quickepgsearch" ]; then
+  rm /etc/yavdr/vdr/plugins/quickepgsearch.conf
+fi
+
+exit 0

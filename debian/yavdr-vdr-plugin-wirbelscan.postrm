@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "wirbelscan" ]; then
+  rm /etc/yavdr/vdr/plugins/wirbelscan.conf
+fi
+
+exit 0
