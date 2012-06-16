@@ -1,0 +1,1 @@
+--epgimages=/usr/lib/yavdr/vdr/epgimages

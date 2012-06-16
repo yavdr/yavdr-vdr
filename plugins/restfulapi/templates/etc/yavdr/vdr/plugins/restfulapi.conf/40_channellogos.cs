@@ -1,0 +1,1 @@
+--channellogos=/usr/share/vdr-channellogos

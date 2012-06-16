@@ -1,19 +1,23 @@
 #!/bin/bash -e
 
-/usr/bin/process-template --owner root --group root --mode 0644 /etc/vdr/plugins/order.conf
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/remote.conf
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/commands.conf
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/keymacros.conf
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/plugins/menuorg.xml
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/plugins/iptv/vlc2iptv
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/Lircmap.xml
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/guisettings.xml
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/keymaps/gyration.xml
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/keymaps/remote.xml
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/sources.xml
-/usr/bin/process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.gtkrc-2.0
-/usr/bin/process-template --owner root --group root --mode 0644 /usr/share/vdr/command-hooks/reccmds.removemarks.conf
-#/usr/bin/process-template --owner root --group root --mode 0644 /usr/share/vdr/command-hooks/reccmds.searchrepeats.conf # bug
-/usr/bin/process-template --owner root --group root --mode 0755 /usr/share/vdr/menuorg-appswitcher
-/usr/bin/process-template --owner root --group root --mode 0755 /usr/share/vdr/shutdown-hooks/S99.shutdown
-/usr/bin/process-template --owner root --group root --mode 0755 /usr/lib/vdr/vdr-recordingaction
+process-template --owner root --group root --mode 0644 /etc/vdr/plugins/order.conf
+process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/remote.conf
+process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/commands.conf
+process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/keymacros.conf
+process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/plugins/menuorg.xml
+process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/plugins/iptv/vlc2iptv
+process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/Lircmap.xml
+process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/guisettings.xml
+process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/keymaps/gyration.xml
+process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/keymaps/remote.xml
+process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.xbmc/userdata/sources.xml
+process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/.gtkrc-2.0
+process-template --owner root --group root --mode 0644 /usr/share/vdr/command-hooks/reccmds.removemarks.conf
+#process-template --owner root --group root --mode 0644 /usr/share/vdr/command-hooks/reccmds.searchrepeats.conf # bug
+process-template --owner root --group root --mode 0755 /usr/share/vdr/menuorg-appswitcher
+process-template --owner root --group root --mode 0755 /usr/share/vdr/shutdown-hooks/S99.shutdown
+process-template --owner root --group root --mode 0755 /usr/lib/vdr/vdr-recordingaction
+
+for TEMPLATE in `ls /usr/share/yavdr/templates/etc/yavdr/vdr/plugins/ | egrep ".conf$"`; do
+  process-template --owner root --group root --mode 0644 /etc/yavdr/vdr/plugins/$TEMPLATE
+done

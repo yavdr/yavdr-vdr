@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "imonlcd" ]; then
+  rm /etc/yavdr/vdr/plugins/imonlcd.conf
+fi
+
+exit 0

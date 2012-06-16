@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "menuorg" ]; then
+  rm /etc/yavdr/vdr/plugins/menuorg.conf
+fi
+
+exit 0

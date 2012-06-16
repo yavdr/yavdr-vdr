@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+case "markad" in
+  configure)
+    yavdr-template-vdr
+  ;;
+esac
+
+exit 0

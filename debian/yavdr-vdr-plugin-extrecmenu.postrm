@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "extrecmenu" ]; then
+  rm /etc/yavdr/vdr/plugins/extrecmenu.conf
+fi
+
+exit 0

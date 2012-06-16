@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "osdteletext" ]; then
+  rm /etc/yavdr/vdr/plugins/osdteletext.conf
+fi
+
+exit 0

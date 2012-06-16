@@ -20,3 +20,88 @@ Package: yavdr-vdr-themes
 Architecture: all
 Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-skinpearlhd, vdr-plugin-text2skin, vdr-skin-narrowhd, vdr-skins-anthra, vdr-skins-speciallogos, vdr-tft-anthraize, vdr-tft-pearlhd, vdr-tft-standard, vdr-xpmlogos
 Description: vdr plugin meta package for yaVDR
+
+Package: yavdr-vdr-plugin-markad
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-markad
+Description: vdr markad plugin for yavdr
+
+Package: yavdr-vdr-plugin-dbus2vdr
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-dbus2vdr
+Description: vdr dbus2vdr plugin for yavdr
+
+Package: yavdr-vdr-plugin-menuorg
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-menuorg
+Description: vdr menuorg plugin for yavdr
+
+Package: yavdr-vdr-plugin-live
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-live
+Description: vdr live plugin for yavdr
+
+Package: yavdr-vdr-plugin-iptv
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-iptv
+Description: vdr iptv plugin for yavdr
+
+Package: yavdr-vdr-plugin-epgsearch
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-epgsearch
+Description: vdr epgsearch plugin for yavdr
+
+Package: yavdr-vdr-plugin-streamdev-server
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-streamdev-server
+Description: vdr streamdev-server plugin for yavdr
+
+Package: yavdr-vdr-plugin-text2skin
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-text2skin
+Description: vdr text2skin plugin for yavdr
+
+Package: yavdr-vdr-plugin-nordlichtsepg
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-nordlichtsepg
+Description: vdr nordlichtsepg plugin for yavdr
+
+Package: yavdr-vdr-plugin-femon
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-femon
+Description: vdr femon plugin for yavdr
+
+Package: yavdr-vdr-plugin-extrecmenu
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-extrecmenu
+Description: vdr extrecmenu plugin for yavdr
+
+Package: yavdr-vdr-plugin-dynamite
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-dynamite
+Description: vdr dynamite plugin for yavdr
+
+Package: yavdr-vdr-plugin-softhddevice
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-softhddevice
+Description: vdr softhddevice plugin for yavdr
+
+Package: yavdr-vdr-plugin-restfulapi
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-restfulapi
+Description: vdr restfulapi plugin for yavdr
+
+Package: yavdr-vdr-plugin-imonlcd
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-imonlcd
+Description: vdr imonlcd plugin for yavdr
+
+Package: yavdr-vdr-plugin-osdteletext
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-osdteletext
+Description: vdr osdteletext plugin for yavdr
+
+Package: yavdr-vdr-plugin-skinpearlhd
+Architecture: all
+Depends: ${misc:Depends} yavdr-vdr, vdr-plugin-skinpearlhd
+Description: vdr skinpearlhd plugin for yavdr

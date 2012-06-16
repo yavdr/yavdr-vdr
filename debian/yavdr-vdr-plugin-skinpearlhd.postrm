@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "skinpearlhd" ]; then
+  rm /etc/yavdr/vdr/plugins/skinpearlhd.conf
+fi
+
+exit 0

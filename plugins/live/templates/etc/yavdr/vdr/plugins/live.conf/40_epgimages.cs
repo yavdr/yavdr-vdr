@@ -1,0 +1,1 @@
+--epgimages=/yavdr/vdr/epgimages

@@ -1,33 +1,22 @@
-#!/bin/bash -e
+#!/bin/sh -e
 
 case "$1" in
   configure)
     # yavdr directory
-    install -o vdr -g vdr  -d /srv/vdr/video.00/
+    install -o yavdr -g yavdr -d /yavdr/vdr
+    install -o yavdr -g yavdr -d /yavdr/vdr/video.00
+    install -o yavdr -g yavdr -d usr/lib/yavdr/vdr
+    install -o yavdr -g yavdr -d usr/lib/yavdr/vdr/vtx
+    install -o yavdr -g yavdr -d usr/lib/yavdr/vdr/epgimages
 
     # disable classic startup script
     /usr/sbin/update-rc.d -f vdr remove
 
-    # some configurations
-    chown vdr:vdr /var/log/vdr
-    chsh -s /bin/bash vdr
-    adduser vdr audio
-    adduser vdr cdrom
-    adduser vdr plugdev
-
-    VDR_UID=`id -u vdr`
-    VDR_GID=`id -g vdr`
-
     # prefill hdf
-    yavdr-db-tool -a preset -k vdr.backend -v streaming
-
-    # overwrite uid and gid
-    yavdr-db-tool -a write -k system.vdr.uid -v $VDR_UID
-    yavdr-db-tool -a write -k system.vdr.gid -v $VDR_GID
+    yavdr-db-tool -a preset -k vdr.type -v streaming
 
     # temlate files
     yavdr-template-vdr
-
   ;;
 
 esac

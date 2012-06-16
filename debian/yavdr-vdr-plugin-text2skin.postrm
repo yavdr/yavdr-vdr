@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "text2skin" ]; then
+  rm /etc/yavdr/vdr/plugins/text2skin.conf
+fi
+
+exit 0

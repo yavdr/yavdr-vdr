@@ -1,0 +1,1 @@
+-d /usr/lib/yavdr/vdr/vtx/

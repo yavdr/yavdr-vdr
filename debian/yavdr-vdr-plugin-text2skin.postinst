@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+case "text2skin" in
+  configure)
+    yavdr-template-vdr
+  ;;
+esac
+
+exit 0

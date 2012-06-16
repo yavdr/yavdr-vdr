@@ -1,0 +1,1 @@
+--shutdown-hooks-wrapper=/usr/share/vdr-plugin-dbus2vdr/shutdown-wrapper

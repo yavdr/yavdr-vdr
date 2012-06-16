@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "nordlichtsepg" ]; then
+  rm /etc/yavdr/vdr/plugins/nordlichtsepg.conf
+fi
+
+exit 0

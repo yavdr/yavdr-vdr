@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "softhddevice" ]; then
+  rm /etc/yavdr/vdr/plugins/softhddevice.conf
+fi
+
+exit 0

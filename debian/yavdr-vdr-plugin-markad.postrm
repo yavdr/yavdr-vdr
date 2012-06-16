@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "markad" ]; then
+  rm /etc/yavdr/vdr/plugins/markad.conf
+fi
+
+exit 0

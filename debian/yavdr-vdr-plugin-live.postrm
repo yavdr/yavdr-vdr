@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "live" ]; then
+  rm /etc/yavdr/vdr/plugins/live.conf
+fi
+
+exit 0

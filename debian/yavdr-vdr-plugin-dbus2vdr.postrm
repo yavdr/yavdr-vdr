@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "dbus2vdr" ]; then
+  rm /etc/yavdr/vdr/plugins/dbus2vdr.conf
+fi
+
+exit 0

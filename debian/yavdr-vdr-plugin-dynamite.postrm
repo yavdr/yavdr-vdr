@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ remove = "dynamite" ]; then
+  rm /etc/yavdr/vdr/plugins/dynamite.conf
+fi
+
+exit 0
