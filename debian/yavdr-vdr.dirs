@@ -1,7 +1,6 @@
 etc/yavdr/backup
 etc
 etc/yavdr/vdr
-usr
 usr/bin
 usr/share/yavdr/templates
 usr/lib/yavdr/vdr/vtx
