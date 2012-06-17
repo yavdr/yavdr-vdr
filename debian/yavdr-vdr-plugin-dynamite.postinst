@@ -2,6 +2,7 @@
 
 case "$1" in
   configure)
+    yavdr-db-tool -a preset -k vdr.hotplug -v 1
     yavdr-template-vdr
   ;;
 esac
