@@ -8,7 +8,7 @@ echo "usr/share/yavdr/templates" >> debian/yavdr-vdr-plugin-$1.dirs
 
 echo "#!/bin/sh -e" > debian/yavdr-vdr-plugin-$1.postinst
 echo "" >> debian/yavdr-vdr-plugin-$1.postinst
-echo "case \"$1\" in" >> debian/yavdr-vdr-plugin-$1.postinst
+echo "case \"\$1\" in" >> debian/yavdr-vdr-plugin-$1.postinst
 echo "  configure)" >> debian/yavdr-vdr-plugin-$1.postinst
 echo "    yavdr-template-vdr" >> debian/yavdr-vdr-plugin-$1.postinst
 echo "  ;;" >> debian/yavdr-vdr-plugin-$1.postinst
@@ -18,7 +18,8 @@ echo "exit 0" >> debian/yavdr-vdr-plugin-$1.postinst
 
 echo "#!/bin/sh -e" > debian/yavdr-vdr-plugin-$1.postrm
 echo "" >> debian/yavdr-vdr-plugin-$1.postrm
-echo "if [ remove = \"$1\" ]; then" >> debian/yavdr-vdr-plugin-$1.postrm
+echo "if [ remove = \"\$1\" ]; then" >> debian/yavdr-vdr-plugin-$1.postrm
+echo "  yavdr-template-vdr" >> debian/yavdr-vdr-plugin-$1.postrm
 echo "  rm /etc/yavdr/vdr/plugins/$1.conf" >> debian/yavdr-vdr-plugin-$1.postrm
 echo "fi" >> debian/yavdr-vdr-plugin-$1.postrm
 echo "" >> debian/yavdr-vdr-plugin-$1.postrm

@@ -1,7 +1,8 @@
 #!/bin/sh -e
 
-case "extrecmenu" in
+case "$1" in
   configure)
+    chown yavdr:yavdr -R /etc/yavdr/vdr/plugins/extrecmenu
     yavdr-template-vdr
   ;;
 esac

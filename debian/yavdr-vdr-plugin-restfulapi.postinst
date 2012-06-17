@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-case "restfulapi" in
+case "$1" in
   configure)
     yavdr-template-vdr
   ;;

@@ -1,6 +1,7 @@
 #!/bin/sh -e
 
-if [ remove = "dynamite" ]; then
+if [ remove = "$1" ]; then
+  yavdr-template-vdr
   rm /etc/yavdr/vdr/plugins/dynamite.conf
 fi
 

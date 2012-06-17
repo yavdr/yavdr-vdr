@@ -1,6 +1,7 @@
 #!/bin/sh -e
 
-if [ remove = "epgsearch" ]; then
+if [ remove = "$1" ]; then
+  yavdr-template-vdr
   rm /etc/yavdr/vdr/plugins/epgsearch.conf
 fi
 

@@ -1,1 +1,2 @@
+plugins/epgsearch/etc/*		etc/
 plugins/epgsearch/templates/*	usr/share/yavdr/templates/

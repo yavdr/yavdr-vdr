@@ -1,6 +1,7 @@
 #!/bin/sh -e
 
-if [ remove = "streamdev-server" ]; then
+if [ remove = "$1" ]; then
+  yavdr-template-vdr
   rm /etc/yavdr/vdr/plugins/streamdev-server.conf
 fi
 
