@@ -2,10 +2,13 @@
 
 # plugins
 PLUGINS=""
-PLUGIN_ARGS=""
 for PLUGIN in `cat  /etc/yavdr/vdr/plugins.conf | egrep "^[^#]" | egrep "^[^ ]+"`; do
   # load arguments
-  PLUGIN_ARGS=$(cat /etc/yavdr/vdr/plugins/plugin.$PLUGIN.conf | egrep "^[^#]" | egrep "^[^ ]+" | xargs)
+  if [ -f /etc/yavdr/vdr/plugins/plugin.$PLUGIN.conf ]; then
+    PLUGIN_ARGS=$(cat /etc/yavdr/vdr/plugins/plugin.$PLUGIN.conf | egrep "^[^#]" | egrep "^[^ ]+" | xargs)
+  else
+    PLUGIN_ARGS=""
+  fi
 
   # buils plugins args
   if [ "$PLUGIN_ARGS" = "" ]; then

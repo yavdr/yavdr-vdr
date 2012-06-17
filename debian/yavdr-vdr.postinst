@@ -11,7 +11,7 @@ case "$1" in
     install -o yavdr -g yavdr -d /var/cache/yavdr/vdr
 
     # symlinks
-    ln -s /var/lib/vdr/themes /etc/yavdr/vdr/themes
+    ln -s /var/lib/vdr/themes /etc/yavdr/vdr/themes 2> /dev/null ||:
 
     # disable classic startup script
     /usr/sbin/update-rc.d -f vdr remove
