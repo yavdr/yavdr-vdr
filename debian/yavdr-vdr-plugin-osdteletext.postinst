@@ -2,6 +2,7 @@
 
 case "$1" in
   configure)
+    install -o yavdr -g yavdr -d /var/cache/yavdr/vdr/vtx
     yavdr-template-vdr
   ;;
 esac

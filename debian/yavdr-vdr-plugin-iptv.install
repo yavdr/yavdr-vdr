@@ -1,1 +1,2 @@
+plugins/iptv/etc/*		etc/
 plugins/iptv/templates/*	usr/share/yavdr/templates/

@@ -2,6 +2,7 @@
 
 case "$1" in
   configure)
+    install -o yavdr -g yavdr -d /etc/yavdr/vdr/plugins/iptv/vlcinput
     yavdr-template-vdr
   ;;
 esac

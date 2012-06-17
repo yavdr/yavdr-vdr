@@ -1,1 +1,1 @@
--d /usr/lib/yavdr/vdr/vtx/
+-d /var/cache/yavdr/vdr/vtx
