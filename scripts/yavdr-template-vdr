@@ -1,5 +1,10 @@
 #!/bin/sh -e
 
+# build vdr call
+if [ -e /usr/bin/_yavdr_build_vdrcall ]; then
+  _yavdr_build_vdrcall > /usr/share/yavdr/templates/etc/init/backend-vdr.conf/65_main_body_exec.cs
+fi
+
 #process-template --owner root --group root --mode 0644 /etc/vdr/plugins/order.conf
 #process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/remote.conf
 #process-template --owner vdr --group vdr --mode 0644 /var/lib/vdr/commands.conf
@@ -26,3 +31,5 @@ process-template --owner yavdr --group yavdr --mode 0644 /etc/yavdr/vdr/keymacro
 for TEMPLATE in `ls /usr/share/yavdr/templates/etc/yavdr/vdr/plugins/ | egrep ".conf$"`; do
   process-template --owner root --group root --mode 0644 /etc/yavdr/vdr/plugins/$TEMPLATE
 done
+
+yavdr-template-backend

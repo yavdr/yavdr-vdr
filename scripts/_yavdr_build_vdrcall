@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# plugins
+PLUGINS=""
+PLUGIN_ARGS=""
+for PLUGIN in `cat  /etc/yavdr/vdr/plugins.conf | egrep "^[^#]" | egrep "^[^ ]+"`; do
+  # load arguments
+  PLUGIN_ARGS=$(cat /etc/yavdr/vdr/plugins/plugin.$PLUGIN.conf | egrep "^[^#]" | egrep "^[^ ]+" | xargs)
+
+  # buils plugins args
+  if [ "$PLUGIN_ARGS" = "" ]; then
+    PLUGINS="$PLUGINS -P$PLUGIN";
+  else
+    PLUGINS="$PLUGINS -P\"$PLUGIN $PLUGIN_ARGS\"";
+  fi
+done
+
+# vdr args
+echo "exec vdr --lirc=/var/run/lirc/lircd -v /yavdr/vdr/video.00 -c /etc/yavdr/vdr -L /usr/lib/vdr/plugins -E /var/cache/yavdr/vdr/epg.data -u yavdr -g /tmp --port 6419 -w 60 -l3 $PLUGINS"
+
