@@ -5,9 +5,10 @@ case "$1" in
     # yavdr directory
     install -o yavdr -g yavdr -d /yavdr/vdr
     install -o yavdr -g yavdr -d /yavdr/vdr/video.00
-    install -o yavdr -g yavdr -d usr/lib/yavdr/vdr
-    install -o yavdr -g yavdr -d usr/lib/yavdr/vdr/vtx
-    install -o yavdr -g yavdr -d usr/lib/yavdr/vdr/epgimages
+    install -o yavdr -g yavdr -d /usr/lib/yavdr/vdr
+    install -o yavdr -g yavdr -d /usr/lib/yavdr/vdr/vtx
+    install -o yavdr -g yavdr -d /usr/lib/yavdr/vdr/epgimages
+    install -o yavdr -g yavdr -d /var/cache/yavdr/vdr
 
     # symlinks
     ln -s /var/lib/vdr/themes /etc/yavdr/vdr/themes

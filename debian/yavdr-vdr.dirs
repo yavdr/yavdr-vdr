@@ -1,3 +1,4 @@
+var/cache/yavdr/vdr
 etc/yavdr/backup
 etc
 etc/yavdr/vdr
@@ -5,3 +6,4 @@ usr/bin
 usr/share/yavdr/templates
 usr/lib/yavdr/vdr/vtx
 usr/lib/yavdr/vdr/epgimages
+var/cache/yavdr/vdr
