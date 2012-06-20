@@ -2,10 +2,10 @@
 
 case "$1" in
   configure)
-    ln -s /usr/share/vdr-plugin-live/css /etc/yavdr/vdr/plugins/live/css
-    ln -s /usr/share/vdr-plugin-live/img /etc/yavdr/vdr/plugins/live/img
-    ln -s /usr/share/vdr-plugin-live/js /etc/yavdr/vdr/plugins/live/js
-    ln -s /usr/share/vdr-plugin-live/themes /etc/yavdr/vdr/plugins/live/themes
+    ln -s /usr/share/vdr-plugin-live/css /etc/yavdr/vdr/plugins/live/css ||:
+    ln -s /usr/share/vdr-plugin-live/img /etc/yavdr/vdr/plugins/live/img ||:
+    ln -s /usr/share/vdr-plugin-live/js /etc/yavdr/vdr/plugins/live/js ||:
+    ln -s /usr/share/vdr-plugin-live/themes /etc/yavdr/vdr/plugins/live/themes ||:
     yavdr-template-vdr
   ;;
 esac
